@@ -20,9 +20,8 @@ class Counters extends Component {
    };
    
    handleDecrement = () => {
-    console.log('Decrement Clicked', this);
-    if(this.state.count !== 0)
-    return this.setState({count: this.state.count - 1});
+    const counters = this.state.counters.filter(c => c.id !== counterId);
+    this.setState({ counters});
   };
 
   render() { 
